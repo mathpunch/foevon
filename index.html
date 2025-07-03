@@ -1,1 +1,45 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Backdoor Talkin' - Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="foevonbackground.jpg" type="image/jpeg">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-title">
+        <img src="foevonbackground.jpg" alt="Song Cover" class="cover-small">
+        <div>
+          <h1>Backdoor Talkin'</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="cover-wrapper">
+        <img src="foevonbackground.jpg" alt="Song Cover" class="cover-large">
+      </div>
+      <audio id="audio-player" src="Backdoor Talkin.mp3"></audio>
+      <div class="controls">
+        <button id="backward" title="Rewind 10s">⏪</button>
+        <button id="play-pause" title="Play/Pause">▶️</button>
+        <button id="forward" title="Forward 10s">⏩</button>
+        <button id="mute" title="Mute/Unmute">🔈</button>
+        <input type="range" id="seekbar" min="0" max="100" value="0">
+        <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+      </div>
+      <div class="extra-features">
+        <a href="https://suno.com/song/1f29f3cd-497b-47f8-85ba-eb81f74b64db" target="_blank" class="external-link">Listen on Suno</a>
+        <a href="Backdoor Talkin.mp3" download class="external-link">Download MP3</a>
+      </div>
+    </main>
+    <footer>
+      <span>Enjoy the music!</span>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
