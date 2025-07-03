@@ -6,16 +6,14 @@
   <title>Backdoor Talkin' - Music Player</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="foevonbackground.jpg" type="image/jpeg">
+  <meta name="theme-color" content="#181820">
+  <link rel="apple-touch-icon" href="foevonbackground.jpg">
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="logo-title">
-        <img src="foevonbackground.jpg" alt="Song Cover" class="cover-small">
-        <div>
-          <h1>Backdoor Talkin'</h1>
-        </div>
-      </div>
+      <img src="foevonbackground.jpg" alt="Song Cover" class="cover-header">
+      <h1>Backdoor Talkin'</h1>
     </header>
     <main>
       <div class="cover-wrapper">
@@ -23,23 +21,27 @@
       </div>
       <audio id="audio-player" src="Backdoor Talkin.mp3"></audio>
       <div class="controls">
-        <button id="backward" title="Rewind 10s">⏪</button>
-        <button id="play-pause" title="Play/Pause">▶️</button>
-        <button id="forward" title="Forward 10s">⏩</button>
-        <button id="mute" title="Mute/Unmute">🔈</button>
-        <input type="range" id="seekbar" min="0" max="100" value="0">
+        <button id="backward" title="Rewind 10s" aria-label="Rewind 10 seconds">⏪</button>
+        <button id="play-pause" title="Play/Pause" aria-label="Play/Pause">▶️</button>
+        <button id="forward" title="Forward 10s" aria-label="Forward 10 seconds">⏩</button>
+        <button id="replay" title="Replay song" aria-label="Replay">&#x1F501;</button>
+        <button id="loop" title="Loop song" aria-label="Loop">&#x1F502;</button>
+        <button id="mute" title="Mute/Unmute" aria-label="Mute/Unmute">🔈</button>
+        <input type="range" id="seekbar" min="0" max="100" value="0" aria-label="Seek">
         <span id="current-time">00:00</span> / <span id="duration">00:00</span>
-        <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="1" aria-label="Volume">
       </div>
-      <div class="extra-features">
-        <a href="https://suno.com/song/1f29f3cd-497b-47f8-85ba-eb81f74b64db" target="_blank" class="external-link">Listen on Suno</a>
-        <a href="Backdoor Talkin.mp3" download class="external-link">Download MP3</a>
+      <div class="nowplaying-bar" id="nowplaying-bar">
+        <button id="mini-play" aria-label="Play/Pause">▶️</button>
+        <span class="np-title">Backdoor Talkin'</span>
+        <span class="np-time" id="mini-time">00:00</span>
       </div>
     </main>
     <footer>
       <span>Enjoy the music!</span>
     </footer>
   </div>
+  <button class="theme-toggle" id="theme-toggle" title="Switch theme">🌙</button>
   <script src="script.js"></script>
 </body>
 </html>
